@@ -31,7 +31,7 @@ public class Configuracion {
         valores = new LinkedHashMap<>();
     }
 
-    
+    // metodo que lee confi.txt
     public void cargar() throws IOException {
         valores.clear();
         if (archivo.exists() == false) {
@@ -49,7 +49,7 @@ public class Configuracion {
         }
     }
 
-   
+    // Escribe los valores enconfigtxt
     public void guardar() throws IOException {
         try (FileWriter escritor = new FileWriter(archivo)) {
             for (Map.Entry<String, String> entrada : valores.entrySet()) {
@@ -57,7 +57,7 @@ public class Configuracion {
             }
         }
     }
-
+ // devuelve un  valor
    
     public String obtener(String clave) {
         String valor = valores.get(clave);

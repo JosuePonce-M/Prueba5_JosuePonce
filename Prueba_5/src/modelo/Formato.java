@@ -8,7 +8,7 @@ import java.util.Date;
 public class Formato {
 
     public static final String FORMATO_FECHA_HORA = "dd/MM/yyyy HH:mm:ss";
-
+  // metodo para el tamno
     public static String tamno(long bytes) {
         double kb = 1024.0;
         double mb = kb * 1024;

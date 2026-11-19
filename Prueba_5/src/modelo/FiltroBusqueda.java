@@ -34,7 +34,7 @@ public class FiltroBusqueda {
         return filtro;
     }
 
-  
+   // metodo para limpiar
     private static String limpiar(String valor) {
         if (valor == null) {
             return "";
@@ -42,7 +42,7 @@ public class FiltroBusqueda {
         return valor.trim();
     }
 
-  
+   // metodo para covertir el taman
     private static long convertirTamano(String valor, String nombre) throws FiltroInvalidoException {
         String limpio = limpiar(valor);
         if (limpio.isEmpty()) {
@@ -60,7 +60,7 @@ public class FiltroBusqueda {
         return numero;
     }
 
-   
+    // metodo para la fecha
     private static Date ConFecha(String valor, String nombre) throws FiltroInvalidoException {
         String limpio = limpiar(valor);
         if (limpio.isEmpty()) {

@@ -7,7 +7,7 @@ public class ValidadorEntrada {
 
    private static final char[] Caracteres_invalidos = {'\\', '/', ':', '*', '?', '"', '<', '>', '|'};
 
-   
+    // vaslida el directorio
     public static File validarDirectorio(String ruta) throws RutaInvalidaException {
         if (ruta == null || ruta.trim().isEmpty()) {
             throw new RutaInvalidaException("Faalta la ruta");
@@ -39,7 +39,7 @@ public class ValidadorEntrada {
         return valor;
     }
 
-   
+   // valida el nombre 
     public static void validarNombre(String nombre) throws OperacionArchivoException {
         if (nombre == null || nombre.trim().isEmpty()) {
             throw new OperacionArchivoException("El nombre no puede estar vacío");

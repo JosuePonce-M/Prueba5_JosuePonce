@@ -18,7 +18,7 @@ public class Bitacora {
         archivo = new File(Nombre_Archivo);
     }
 
-    
+    // metodo registrar
     public synchronized void registrar(String accion, String ruta) {
         try (FileWriter escritor = new FileWriter(archivo, true)) {
             escritor.write(Formato.fechaHoraActual() + " | " + accion + " | " + ruta  + System.lineSeparator());
@@ -27,7 +27,7 @@ public class Bitacora {
         }
     }
 
-   
+  // metodo que lee  todo el contenido de la bitacora
     public synchronized String leerTodo() throws IOException {
         if (archivo.exists() == false) {
             return "(La bitácora todavía está vacía)";
